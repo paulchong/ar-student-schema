@@ -3,7 +3,7 @@ require_relative '../config'
 # this is where you should use an ActiveRecord migration to
 
 class CreateStudents < ActiveRecord::Migration
-  belongs_to :teacher
+  has_and_belongs_to_many :teachers
 
   def change
     create_table :students do |t|
