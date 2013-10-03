@@ -5,6 +5,7 @@ require_relative '../config'
 class CreateTeachers < ActiveRecord::Migration
   def change
     create_table :teachers do |t|
+      t.has_many :students
       t.string  :first_name
       t.string  :last_name
       t.string  :email
@@ -13,3 +14,4 @@ class CreateTeachers < ActiveRecord::Migration
     end  
   end
 end
+
